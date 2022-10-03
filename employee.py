@@ -13,26 +13,26 @@ class Employee:
     def get_pay(self):
         if self.is_monthly == True:
             if self.commission_number > 0:
-                print(self.name + "'s salary is " + str((self.salary)+(self.commission_number*self.contract_worth)))
+                return(str((self.salary)+(self.commission_number*self.contract_worth)))
             else:
-                print(self.name + "'s salary is " + (str(self.salary)))
+                return(str(self.salary))
         else:
             if self.commission_number > 0:
-                print(self.name + "'s salary is " + str((self.salary*self.hours)+(self.commission_number*self.contract_worth)))
+                return(str((self.salary*self.hours)+(self.commission_number*self.contract_worth)))
             else:
-                print(self.name + "'s salary is " + str((self.salary*self.hours)))
+                return(str(self.salary*self.hours))
 
     def __str__(self):
         if self.is_monthly == True:
             if self.commission_number > 0:
                 exit
             else:
-                print(self.name + " works on a monthly salary of " + str(get_pay()))
+                print(self.name + " works on a monthly salary of " + str((self.get_pay())))
         else:
             if self.commission_number > 0:
                 exit
             else:
-                print(self.name + "works on a contract of " + str(self.hours) + " at " + str(self.salary) + "/hour. Their total pay is " + self.get_pay())
+                print(self.name + "works on a contract of " + str(self.hours) + " at " + str(self.salary) + "/hour. Their total pay is " + str(self.get_pay()))
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
