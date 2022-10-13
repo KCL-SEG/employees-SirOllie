@@ -25,7 +25,7 @@ class Employee:
     def __str__(self):
         if self.is_monthly == True:
             if self.commission_number > 1:
-                return (self.name + " works on a monthly salary of " + str(self.salary) + " and receives a commission for " + str(self.commission_number) + " contract(s) at " + str(self.contract_worth) + "/contract. Their total pay is " + str(self.get_pay()) + ".")
+                return (self.name + " works on a monthly salary of " + str(self.salary) + " and receives a commission for " + str(self.commission_number) + " contract(s) at " + str(self.contract_worth) + "/contract.  Their total pay is " + str(self.get_pay()) + ".")
             elif self.commission_number == 1:
                 return (self.name + " works on a monthly salary of " + str(self.salary) + " and receives a bonus commission of " + str(self.contract_worth) + ". Their total pay is " + str(self.get_pay()) + ".")
             else:
@@ -34,9 +34,9 @@ class Employee:
             if self.commission_number > 1:
                 return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.salary) + "/hour and receices a commission for " + str(self.commission_number) + " contract(s) at " + str(self.contract_worth) + "/contract. Their total pay is "+str(self.get_pay()) + ".")
             elif self.commission_number == 1:
-                return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.salary) + "/hour and receices a bonus commission of " + str(self.contract_worth) + ". Their total pay is "+str(self.get_pay()) + ".")
+                return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.salary) + "/hour and receices a bonus commission of " + str(self.contract_worth) + ".  Their total pay is "+str(self.get_pay()) + ".")
             else:
-                return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.salary) + "/hour. Their total pay is " + str(self.get_pay()) + ".")
+                return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.salary) + "/hour.  Their total pay is " + str(self.get_pay()) + ".")
 
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
